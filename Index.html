@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CTAE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="data:image/jpeg;base64,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" type="image" sizes="16x16">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    img{
+        padding: 5px;
+    }
+    body{
+        background-color: wheat ;
+    }
+    li{
+      margin: 10px; 
+      font-size: larger;
+      font-weight: 600; 
+    }
+
+    hr { 
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 5px;
+    }
+
+    .vl {
+  border-left: 3px solid black;
+  height: 300px;
+  margin-left: 450px;
+}
+</style>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <img style="float: left; margin-right: 40px;" src="https://www.ctae.ac.in/assets/images/logo-mpuat.png" alt="Image">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.ctae.ac.in/singlePage.php?id=1&type=DP">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.ctae.ac.in/singlePage.php?id=3&type=SP">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://google.com">Other</a>
+            </li>
+          </ul>
+        </div>
+      </nav>   
+
+
+
+
+      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="100000000000">
+            <img src="https://www.ctae.ac.in/images/slider/large/img9268006.jpg" class="d-block w-100" alt="Image can't load!">
+          </div>
+          <div class="carousel-item" data-interval="2000">
+            <img src="https://www.ctae.ac.in/images/slider/large/img92680013.jpg" class="d-block w-100" alt="Image can't load!">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.ctae.ac.in/images/slider/large/img9268009.jpg" class="d-block w-100" alt="Image can't load!">
+          </div>
+        </div>
+
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+      </div>
+
+
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+
+      <h4 style="color:black;font-weight: 600;margin-left: 15px; margin-top: 20px;">WELCOME TO</h4>
+      <h4 style="color: darkblue;font-weight: 600;margin-left: 15px;margin-top: -12px;">COLLEGE OF TECHNOLOGY AND ENGINEERING</h4>
+
+      <p>
+        <img style="float: left;padding: 5px; height: 250px;border: solid 2px black;margin-left: 10px;margin-top: 5px;margin-right: 10px;" src="https://www.ctae.ac.in/images/editorFiles/image/Dean%20CTAE/Dean%20Sir%20A_K_Sharma.jpg" alt="Image not found!">
+        The College of Technology and Engineering, Udaipur (CTAE) is a constituent college of the Maharana Pratap University of Agriculture and Technology, Udaipur. The college was started in 1964 with a Graduate Programme in Agricultural Engineering. Presently the CTAE has undergraduate degree programmes in 8 branches, M.Tech. programmes in 12 disciplines, besides an MBA programme in Engineering and PhD programmes in 9 disciplines. It is situated at about 7 km from Udaipur city railway station and bus terminal and 2 km from Rana Pratap Nagar railway station.
+        <br>
+        The college has a rich infrastructure with well-equipped laboratories in each department having modern state-of-art instruments/equipment to provide the hands-on training to the students. Besides laboratories, the college central workshop in the department of Mechanical Engineering is well equipped with modern machines, tools and other facilities to impart training to the students and help in project work. Other departments such as Farm Machinery and Power Engineering, Renewable Energy Engineering and Post-Harvest Technology have their own workshops to handle R & D projects...
+      </p>
+
+
+      <button style="margin-left: 550px;margin-top: -30px;height: 30px;padding:3px;" type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false">
+        <a style="color: white;text-decoration: none;" href="https://www.ctae.ac.in/singlePage.php?id=12&type=SP"> Read more</a>
+      </button>
+
+
+
+      <hr>
+
+
+      <h4 style="color: blue;font-weight: 600;font-style: italic; margin-left: 20px;margin-top: 70px;" >DISCOVER CTAE</h4>
+      <br>
+      <h5 style="color: brown" class="text-center" >PICTURE GALLERY</h5>
+      <br> <br>
+      <div class="row">
+        <div class="col-lg-4">
+          <img style="border: solid black; margin-left: 1rem;" src="https://www.ctae.ac.in/assets/images/picture-gallery01.jpg" alt="Image!">
+        </div>
+        <div class="col-lg-4">
+          <img style="border: solid black" src="https://www.ctae.ac.in/images/infocus/large/img9268002.jpg" alt="Image!">
+        </div>
+        <div class="col-lg-4">
+          <img style="border: solid black" src="https://www.ctae.ac.in/images/infocus/large/img9268004.jpg" alt="Image!">
+        </div>
+      </div>
+      <br> <br>
+      <div class="contact text-center">
+        <h3>Contact Us</h3>
+        <br> 
+        <input style="width: 60%; background-color:lightyellow;" type="text" placeholder="Enter Name">
+        <br> <br>
+        <input style="width: 60%; margin-top: 0px;background-color:lightyellow;" type="email" placeholder="Enter Email">
+        <br> <br>
+        <textarea style="background-color:lightyellow;" cols="100%" rows="7" placeholder="Enter Message"></textarea>
+        <br> <br>
+        <button style="background-color:lightgreen;" type="submit">Submit</button>
+        <br> <br>
+        <h5>***Thank you for visiting!***</h5>
+      </div>
+
+
+
+
+
+
+</body>
+</html>
